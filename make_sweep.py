@@ -84,7 +84,7 @@ def plot_save_grayscale(FOLDER, FILENAME, PLOT_SAVE_FOLDER, column_name_x, colum
                 if header_option == 'yes':
                     SAVE_FOLDER = PLOT_SAVE_FOLDER
                 else:
-                    SAVE_FOLDER = PLOT_SAVE_FOLDER + '\No_Header'
+                    SAVE_FOLDER = os.path.join(PLOT_SAVE_FOLDER, 'No_Header')
                 if not os.path.isdir(SAVE_FOLDER):
                         os.mkdir(SAVE_FOLDER)
                 FILE_RESULT = '{}_grayscale_'.format(FILENAME) + c + '.png'
@@ -120,7 +120,7 @@ def plot_save_grayscale(FOLDER, FILENAME, PLOT_SAVE_FOLDER, column_name_x, colum
                 if header_option == 'yes':
                     SAVE_FOLDER = PLOT_SAVE_FOLDER
                 else:
-                    SAVE_FOLDER = PLOT_SAVE_FOLDER + '\No_Header'
+                    SAVE_FOLDER = os.path.join(PLOT_SAVE_FOLDER, 'No_Header')
                 if not os.path.isdir(SAVE_FOLDER):
                         os.mkdir(SAVE_FOLDER)
                 FILE_RESULT = '{}_grayscales_'.format(FILENAME) + 'panel' + '.png'

@@ -18,8 +18,17 @@ column_list_1 = ['currentpA', 'Gdiff2e2h', 'amplitude', 'phase']
 
 column_list_2 = ['I1pA', 'G12e2h', 'I2pA', 'G22e2h', 'amplitude', 'phase']
 
-dict_label = {'Vg8V': 'Vg8 (V)', 'VsdmV': '$\mathregular{V_{sd}\,(mV)}$', 'Vg9V': 'Vg9 (V)', 'epsilonV': r'$\mathregular{\epsilon \, (V)}$', 'deltaV': r'$\mathregular{\delta \, (V)}$',
-'currentpA': 'I (pA)', 'I1pA': '$\mathregular{I_{1}\, (pA)}$', 'I2pA': '$\mathregular{I_{2}\, (pA)}$', 'Gdiff2e2h': r'$\mathregular{G \, (\frac{2e^{2}}{h})}$', 'G12e2h': r'$\mathregular{G_{1} \, (\frac{2e^{2}}{h})}$', 'G22e2h': r'$\mathregular{G_{2} \, (\frac{2e^{2}}{h})}$', 'amplitude': 'Amplitude (V)', 'phase': 'Phase (rad)', 'freqGHz': 'f (GHz)'}
+dict_label = {'Vg8V': 'Vg8 (V)', 'VsdmV': '$\mathregular{V_{sd}\,(mV)}$',
+              'Vg9V': 'Vg9 (V)', 'epsilonV': r'$\mathregular{\epsilon \, (V)}$',
+              'deltaV': r'$\mathregular{\delta \, (V)}$',
+              'currentpA': 'I (pA)', 'I1pA': '$\mathregular{I_{1}\, (pA)}$',
+              'I2pA': '$\mathregular{I_{2}\, (pA)}$',
+              'Gdiff2e2h': r'$\mathregular{G \, (\frac{2e^{2}}{h})}$',
+              'G12e2h': r'$\mathregular{G_{1} \, (\frac{2e^{2}}{h})}$',
+              'G22e2h': r'$\mathregular{G_{2} \, (\frac{2e^{2}}{h})}$',
+              'amplitude': 'Amplitude (V)',
+              'phase': 'Phase (rad)',
+              'freqGHz': 'f (GHz)'}
 
 for filename in os.listdir(FOLDER_TO_PLOT):
     # Select column_list depending on date : after April 22nd simultaneous left and right measurement, before this date we measure through the superconducting finger.
@@ -99,3 +108,4 @@ for filename in os.listdir(FOLDER_TO_PLOT):
             if move_option =='yes':
                 path = os.path.join(FOLDER_TO_PLOT, filename)
                 shutil.move(path, ARCHIVE_FOLDER)
+                
